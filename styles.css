@@ -1,0 +1,331 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.track::after {
+    content: "";
+    display: flex;
+    width: 100%; 
+}
+
+.track {
+    display: flex;
+    animation: scrollLeft 30s linear infinite;
+    gap: 8px;
+}
+
+.item {
+    flex-shrink: 0;
+    width: 150px;
+    height: 35px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Karantina', cursive;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.intro {
+    background-color: #BFD6E0;
+    width: 100%;
+    padding: 2vw;
+}
+
+.bt {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2vw;
+    margin-bottom: 3vw;
+}
+
+.btn {
+    padding: 1rem 3vw;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    letter-spacing: 2px;
+    background-color: hsl(218, 87%, 66%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(24, 53, 220) 0px 7px 29px 0px;
+}
+
+.btn:active {
+    letter-spacing: 2px;
+    background-color: hsl(244, 80%, 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(24, 66, 220) 0px 0px 0px 0px;
+    transform: translateY(2px);
+    transition: 100ms;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3vw;
+    flex-wrap: nowrap;
+    margin-top: 2vw;
+}
+
+.text {
+    flex-grow: 1;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 4.5vw;
+    color: #585454;
+    min-width: 0;
+}
+
+.image {
+    flex-shrink: 1;
+    width: 55vw;
+    max-width: 100%;
+    height: auto;
+    min-width: 0;
+}
+
+.phones {
+    display: flex;
+    background-color: #A0B4CD;
+    width: 100%;
+    padding: 2vw;
+    flex-direction: row;
+}
+
+.feature {
+    display: flex;
+    justify-content: space-around;
+    gap: 1vw;
+    align-items: space-evenly;
+    margin-bottom: 3vw;
+    flex-direction: column;
+}
+
+.fe {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 2vw;
+    color: white;
+}
+
+.fe1 {
+    font-family: 'Days One', sans-serif;
+    font-size: 1.3vw;
+    color: white;
+    margin-bottom: 1vw;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2vw;
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    max-width: 30%;
+    min-width: 100px;
+    text-align: center;
+}
+
+.image-item img {
+    width: 95%;
+    height: auto;
+    margin-bottom: 1vw;
+    opacity: 45%;
+}
+
+.image-item button {
+    margin: 0.2vw 0;
+    border-radius: 50px;
+    border: 0;
+    background-color: #AFC3DB;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2vw;
+}
+
+.image-item p {
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 1.2vw;
+    color: #ffffff;
+}
+
+.image-item:hover img {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    height: auto;
+}
+
+.image-item:hover button {
+    background-color: hsl(218, 97%, 13%);
+    transform: scale(1.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.image-item:hover p {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.device {
+    background-color: #BFD6E0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position:relative;
+}
+.float,.txt{
+    position: absolute;
+}
+.device img {
+    max-width: 50%;
+    max-height: 50%;
+    width: 100%;
+    justify-content: center;
+    height: auto;
+    object-fit: contain;
+    animation: float 3s ease-in-out infinite;
+}
+
+.txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 3vw;
+    transform: translate(-50%, -50%);
+    color: #585454;
+    text-align: center
+}
+.footer{
+    display:flex;
+    background-color: black;
+    justify-content:space-around;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1vw;
+    padding: 1.1rem 0;
+}
+.footer div {
+    flex: 1;
+    text-align: center;
+
+}
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.footer ul li {
+    margin-bottom: 0.625rem; 
+    font-size: 1vw; 
+    font-family: 'Martel Sans', sans-serif;
+    color: white;
+    gap: 2vw;
+}
+.footer1, .footer2, .footer3, .footer4 {
+    flex: 1;
+
+}
+.footer h1,.footer h2,.footer h3,.footer h4{
+    font-family: 'Martel Sans', sans-serif;
+    color: white;
+    font-size:2vw;
+    margin: 0;
+    margin-bottom: 1.5rem;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    75%{
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .text {
+        font-size: 2rem;
+    }
+    .image {
+        width: 45vw;
+    }
+    .btn {
+        padding: 1rem 4vw;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 1rem;
+    }
+    .btn {
+        padding: 1rem 1vw;
+        font-size: 0.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .device img {
+        max-width: 40%;
+        max-height: 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    .device img {
+        max-width: 30%;
+        max-height: 30%;
+    }
+}
