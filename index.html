@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seamless Infinite Scroll</title>
+    <title>cybersentinels/home</title>
     <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="wrapper">
@@ -34,8 +35,8 @@
     <div class="intro">
         <div class="bt">
         <button class="btn">About Us</button>
-        <button class="btn">Get Started</button>
-        <button class="btn">Log In/Sign Up</button>
+        <button class="btn" id="login-signup">Get Started</button>
+        <button class="btn" id="login-signup">Log In/Sign Up</button>
     </div>
     <div class="main">
         <div class="text">
@@ -89,9 +90,9 @@
                 <div class="footer2">
 <h2>PAGES</h2>
             <ul>
-            <li>CONTACTS</li>
-            <li>KEYPAD</li>
-            <li>LOG IN/SIGN UP</li>
+            <li id="cont">CONTACTS</li>
+            <li id="keypad">KEYPAD</li>
+            <li id="login-signup">LOG IN/SIGN UP</li>
         </ul>
         </div>
 
@@ -112,5 +113,27 @@
         </div>
 
     </div>
+    <div class="stick">
+        <div>
+            <img src="assets/Facebook.png" alt="s" />
+        </div>
+        <div>
+            <img src="assets/Instagram.png" alt="s" />
+        </div>
+        <div>
+            <img src="assets/Twitter.png" alt="s" />
+        </div>
+    </div>
+    <script>
+        document.getElementById('login-signup').addEventListener('click', function() {
+           window.location.href = 'login.html';
+        });
+        document.getElementById('keypad').addEventListener('click', function() {
+           window.location.href = 'keypad.html';
+        });
+        document.getElementById('cont').addEventListener('click', function() {
+           window.location.href = 'contacts.html';
+        });
+    </script>
 </body>
 </html>

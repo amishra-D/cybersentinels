@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts</title>
+  <link rel="stylesheet" href="contacts.css">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Your Contacts</h1>
+  </header>
+  <main>
+    <section class="form-section">
+      <h2>Add or Edit Contact</h2>
+      <div class="form-container">
+        <input type="text" id="contact-name" placeholder="Contact Name" />
+        <input type="tel" id="contact-phone" placeholder="Contact Phone Number" />
+        <button id="save-btn">Save Contact</button>
+      </div>
+    </section>
+    <section class="contacts-section">
+      <h2>All Contacts</h2>
+      <div id="contact-list">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <button id="logout-btn">Logout</button>
+  </footer>
+  <script type="module" src="gptcont.js"></script>
+</body>
+</html>

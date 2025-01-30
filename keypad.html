@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Keypad</title>
+  <link rel="stylesheet" href="keypad.css">
+  <script src="keypad.js" type="module" defer></script>
+
+</head>
+<body>
+
+  <!-- Keypad Container -->
+  <div class="keypad-container">
+    <input type="text" id="phone-number" readonly>
+
+    <!-- Keypad Buttons -->
+    <div class="keypad">
+      <button class="key" data-key="1">1</button>
+      <button class="key" data-key="2">2</button>
+      <button class="key" data-key="3">3</button>
+
+      <button class="key" data-key="4">4</button>
+      <button class="key" data-key="5">5</button>
+      <button class="key" data-key="6">6</button>
+
+      <button class="key" data-key="7">7</button>
+      <button class="key" data-key="8">8</button>
+      <button class="key" data-key="9">9</button>
+
+      <button class="key" data-key="*">*</button>
+      <button class="key" data-key="0">0</button>
+      <button class="key" data-key="#">#</button>
+    </div>
+
+    <!-- Call Options -->
+    <div class="call-options">
+      <button class="delete" id="delete-btn">⌫</button>
+      <button class="call" id="call-btn">📞</button>
+      <button class="end-call" id="end-call-btn">🚫</button>
+    </div>
+  </div>
+
+</body>
+</html>

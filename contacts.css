@@ -1,0 +1,81 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #BFD6E0;
+    font-family: 'Martel Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.contactscards {
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contactscard {
+    background: black;
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+}
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+.onecont {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.onecont img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: white;
+}
+
+.onecont .contname {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    flex-grow: 1;
+}
+.logout-btn {
+    background-color: #FF4D4D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.logout-btn:hover {
+    background-color: #D93636;
+}
+@media (max-width: 600px) {
+    .contactscards {
+        width: 95%;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .onecont .contname {
+        font-size: 16px;
+    }
+}

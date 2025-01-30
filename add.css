@@ -1,0 +1,170 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 0); /* You can choose any font you prefer */
+}
+.butto {
+    position: fixed;
+    left: 1%;
+    top: 1%;
+    background-color: #000000d1;
+    color: #a0a4bc;
+    width: 7.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 2.9em;
+    border: #3654ff 0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Adjusts spacing */
+    padding: 0 1.5em; /* Adds padding for better spacing */
+    transition: all 0.6s ease;
+}
+
+.butto text {
+   align-items: center; /* Increase space between text and SVG */
+   left:50%;
+}
+
+.butto:hover {
+    background-color: #3654ff;
+    color: white;
+    cursor: pointer;
+}
+.button {
+    position:fixed;
+    right:1%;
+    top:1%;
+    background-color: #000000d1;
+    color: #a0a4bc;
+    width: 7.5em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 2.9em;
+    border: #3654ff 0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+  }
+  
+  .text {
+    margin: 0 1.5em;
+  }
+  .button:hover{
+    background-color: #3654ff;
+    color:white;
+    cursor: pointer;
+    
+  }
+  
+  .button svg {
+    width: 1.6em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover svg {
+    transform: translateX(3px);
+    color: white;
+   
+  }
+  
+.taker {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center;
+    padding: 20px; /* Add some padding around the content */
+}
+
+.image {
+    width: 30%; /* Use a percentage for responsiveness */
+    max-width: 150px; /* Set a max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.txtinp {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw; /* Space between input fields */
+    width: 100%; /* Full width on small screens */
+    max-width: 400px; /* Set a max width for larger screens */
+}
+
+.input-container {
+    position: relative;
+    margin: 10px 0; /* Space between input containers */
+    width: 100%; /* Full width for input containers */
+}
+
+.input-container input[type="text"] {
+    font-size: 1.2rem; /* Adjust font size */
+    color:white;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #424242;
+    padding: 0.5rem 0; /* Adjust padding */
+    background-color: transparent;
+    outline: none;
+}
+
+.input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fffbfb;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="text"]:valid ~ .label {
+    top: -20px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #3654ff;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline {
+    transform: scaleX(1);
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 600px) {
+    .taker {
+        flex-direction: row; /* Align items horizontally on larger screens */
+        justify-content: center; /* Center items */
+    }
+
+    .image {
+        margin-bottom: 0; /* Remove bottom margin on larger screens */
+        margin-right: 20px; /* Add right margin for spacing */
+    }
+
+    .txtinp {
+        width: auto; /* Allow txtinp to take its natural width */
+    }
+}
+
+@media (min-width: 900px) {
+    .input-container {
+        width: 80%; /* Wider input containers on larger screens */
+    }
+}

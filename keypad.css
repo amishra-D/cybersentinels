@@ -1,0 +1,151 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    margin: 0;
+    background-color: #fbfbfb;
+}
+
+/* Full-Width Keypad */
+.keypad-container {
+    width: 100%;
+    background: #222;
+    padding: 15px;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+/* Phone Number Display */
+#phone-number {
+    width: 90%;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    background: #150000;
+    color: white; /* Set text color to white */
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Keypad Buttons */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 0 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.key {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    color: white;
+    background: #444;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.key:hover {
+    background: #666;
+}
+
+/* Call Options */
+.call-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.call, .delete, .end-call {
+    width: 20%;
+    height: 50px;
+    font-size: 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.call {
+    background: #28a745; /* Green background */
+    color: white; /* Set text color to white */
+    font-size: 22px; /* Adjust font size */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: 0.2s; /* Transition effect */
+}
+.call:hover {
+    background: #218838;
+}
+
+.delete {
+    background: #444;
+    color: white;
+}
+
+.delete:hover {
+    background: #666;
+}
+
+.end-call {
+    background: #dc3545;
+    color: white;
+}
+
+.end-call:hover {
+    background: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .keypad-container {
+        padding: 10px;
+    }
+
+    #phone-number {
+        font-size: 20px;
+        height: 40px;
+    }
+
+    .key {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .call, .delete, .end-call {
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .keypad {
+        gap: 5px;
+    }
+
+    .key {
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .call, .delete, .end-call {
+        width: 25%;
+        font-size: 18px;
+    }
+}
