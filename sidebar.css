@@ -1,0 +1,116 @@
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #2A2A2A;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+#sidebar-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    background-color: #2A2A2A;
+    color: white;
+    font-size: 34px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+}
+
+
+.sidebar.active + #sidebar-toggle-btn {
+    left: 260px;
+}
+.sidebar.active #profile {
+    background-color: rgba(62, 43, 97, 0.466);
+}
+
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color:#2A2A2A;
+    width:100%;
+    border-radius: 8%;
+    
+}
+
+.profile img {
+    padding:2px;
+    width: 80px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+.profile p {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 1px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-links li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    flex-grow: 1;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 250px;
+        left: -270px;
+    }
+    .sidebar-toggle-btn {
+        font-size: 8px;
+        left: 5px;
+    }
+    .sidebar.active {
+        left: 0;
+    }
+    .sidebar.active + #sidebar-toggle-btn {
+        left: 260px;
+    }
+}

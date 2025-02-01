@@ -3,10 +3,20 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    background-color: #BFD6E0;
+    background-color: #090909;
     font-family: 'Martel Sans', sans-serif;
 }
-
+.adde{
+    position: fixed; 
+    bottom: 70px;
+    right: 15px;
+    
+}
+.adde img{
+    width:50%;
+    height: auto;
+    max-width: 100px;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -21,7 +31,7 @@ body, html {
     gap: 20px;
 }
 .contactscard {
-    background: black;
+    background: #2A2626;
     border-radius: 15px;
     padding: 15px;
     color: white;
@@ -77,5 +87,18 @@ body, html {
 
     .onecont .contname {
         font-size: 16px;
+    }
+}
+@media (max-width: 480px) {
+    .adde{
+        position: fixed; 
+        bottom: 70px;
+        right: 3px;
+        
+    }
+    .adde img{
+        width:45%;
+        height: auto;
+        max-width: 100px;
     }
 }

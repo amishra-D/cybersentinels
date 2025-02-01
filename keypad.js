@@ -1,4 +1,4 @@
-// Firebase setup
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { getFirestore, collection, getDocs, query } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
@@ -23,7 +23,6 @@ const keys = document.querySelectorAll(".key");
 
 let contactsArray = [];
 
-// Fetch contacts from Firestore
 async function fetchContacts() {
     try {
         const q = query(collection(db, "contacts"));
@@ -39,10 +38,8 @@ async function fetchContacts() {
     }
 }
 
-// Load contacts on page load
 fetchContacts();
 
-// Append number to input field
 keys.forEach((key) => {
     key.addEventListener("click", () => {
         console.log(`Button pressed: ${key.getAttribute("data-key")}`);
@@ -52,13 +49,11 @@ keys.forEach((key) => {
 });
 
 
-// Delete last digit
 deleteBtn.addEventListener("click", () => {
     phoneNumberInput.value = phoneNumberInput.value.slice(0, -1);
     checkContactMatch();
 });
 
-// Check if entered number matches a contact
 function checkContactMatch() {
     const enteredNumber = phoneNumberInput.value.trim();
     
@@ -71,7 +66,6 @@ function checkContactMatch() {
     }
 }
 
-// Simulate calling
 callBtn.addEventListener("click", () => {
     const number = phoneNumberInput.value;
     if (number) {
@@ -81,7 +75,6 @@ callBtn.addEventListener("click", () => {
     }
 });
 
-// End call (Reset input)
 endCallBtn.addEventListener("click", () => {
     phoneNumberInput.value = "";
     phoneNumberInput.style.color = "#000";

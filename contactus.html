@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contactus.css">
+    <link rel="stylesheet" href="sidebar.css"> 
+</head>
+<body>
+    <div id="sidebar-container"></div>
+
+   
+    <button id="sidebar-toggle-btn">☰</button> 
+
+    <div class="head">
+        <img src="assets\contus.jpg" alter="">
+        <p>CONTACT US</p>
+    </div>
+    
+<div class="forms">
+    <div class="inputGroup">
+        <input type="text" required="" autocomplete="off">
+        <label for="name">First Name</label>
+    </div>
+    <div class="inputGroup">
+        <input type="text" required="" autocomplete="off">
+        <label for="name">Last Name</label>
+    </div>
+    <div class="inputGroup">
+        <input type="text" required="" autocomplete="off">
+        <label for="name">Email</label>
+    </div>
+    <div class="inputGroup">
+        <input type="text" required="" autocomplete="off">
+        <label for="name">Subject</label>
+    </div>
+    <button class ="sub">SUBMIT</button>
+</div>
+<script src="sidebar.js"></script>
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+       
+        let firstName = document.getElementById("firstName").value.trim();
+        let lastName = document.getElementById("lastName").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let subject = document.getElementById("subject").value.trim();
+
+       
+        if (firstName === "" || lastName === "" || email === "" || subject === "") {
+            alert("Please fill out all fields before submitting.");
+            return;
+        }
+        alert("Submitted successfully!");
+
+        document.getElementById("contactForm").reset();
+    });
+</script>
+</body>
+</html>

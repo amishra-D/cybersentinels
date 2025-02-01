@@ -34,9 +34,9 @@
     </div>
     <div class="intro">
         <div class="bt">
-        <button class="btn">About Us</button>
+        <button class="btn" id="ab">About Us</button>
         <button class="btn" id="login-signup">Get Started</button>
-        <button class="btn" id="login-signup">Log In/Sign Up</button>
+        <button class="btn" id="login-signu">Log In/Sign Up</button>
     </div>
     <div class="main">
         <div class="text">
@@ -82,8 +82,8 @@
             <div class="footer1">
 <h1>ABOUT US</h1>
         <ul>
-                <li>ABOUT US</li>
-                <li>BLOGS</li>
+                <li id="abus">ABOUT US</li>
+                <li id="abus">BLOGS</li>
             </ul>
             </div>
 
@@ -100,7 +100,7 @@
 
 <h3>HELP AND SUPPORT</h3>
             <ul>
-            <li>NEED HELP?</li>
+            <li id="contus">NEED HELP?</li>
             <li>FAQ CHATBOT</li>
         </ul>
         </div>
@@ -108,7 +108,7 @@
             <div class="footer4">
 <h4>CONTACT US</h4>
         <ul>  
-            <li>CONTACT US</li>
+            <li id="contus">CONTACT US</li>
         </ul>
         </div>
 
@@ -128,11 +128,23 @@
         document.getElementById('login-signup').addEventListener('click', function() {
            window.location.href = 'login.html';
         });
+        document.getElementById('login-signu').addEventListener('click', function() {
+           window.location.href = 'login.html';
+        });
         document.getElementById('keypad').addEventListener('click', function() {
            window.location.href = 'keypad.html';
         });
         document.getElementById('cont').addEventListener('click', function() {
            window.location.href = 'contacts.html';
+        });
+        document.getElementById('ab').addEventListener('click', function() {
+           window.location.href = 'about.html';
+        });
+        document.getElementById('abus').addEventListener('click', function() {
+           window.location.href = 'about.html';
+        });
+        document.getElementById('contus').addEventListener('click', function() {
+           window.location.href = 'contactus.html';
         });
     </script>
 </body>

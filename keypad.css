@@ -1,4 +1,4 @@
-/* General Styling */
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -9,7 +9,6 @@ body {
     background-color: #fbfbfb;
 }
 
-/* Full-Width Keypad */
 .keypad-container {
     width: 100%;
     background: #222;
@@ -22,7 +21,6 @@ body {
     transition: 0.3s;
 }
 
-/* Phone Number Display */
 #phone-number {
     width: 90%;
     height: 50px;
@@ -32,12 +30,11 @@ body {
     border: none;
     outline: none;
     background: #150000;
-    color: white; /* Set text color to white */
+    color: white;
     border-radius: 8px;
     padding: 10px;
 }
 
-/* Keypad Buttons */
 .keypad {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -63,7 +60,6 @@ body {
     background: #666;
 }
 
-/* Call Options */
 .call-options {
     display: flex;
     justify-content: center;
@@ -82,13 +78,13 @@ body {
 }
 
 .call {
-    background: #28a745; /* Green background */
-    color: white; /* Set text color to white */
-    font-size: 22px; /* Adjust font size */
-    border: none; /* Remove border */
-    border-radius: 10px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: 0.2s; /* Transition effect */
+    background: #28a745; 
+    color: white;
+    font-size: 22px; 
+    border: none; 
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s; 
 }
 .call:hover {
     background: #218838;
@@ -112,7 +108,6 @@ body {
     background: #c82333;
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
     .keypad-container {
         padding: 10px;

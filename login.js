@@ -15,15 +15,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Get references to the form fields and buttons
 const emailLoginIn = document.getElementById("email-login");
 const passwordLoginIn = document.getElementById("password-login");
 const loginBtn = document.getElementById("login-btn");
 const signupBtn = document.getElementById("signup-btn");
 
 loginBtn.addEventListener("click", function(event) {
-  event.preventDefault(); // Prevent default form submission behavior
-
+  event.preventDefault();
   const loginEmail = emailLoginIn.value;
   const loginPassword = passwordLoginIn.value;
 
@@ -36,9 +34,8 @@ loginBtn.addEventListener("click", function(event) {
     .then((userCredential) => {
       const user = userCredential.user;
       window.alert("Success! Welcome back!");
-
       localStorage.setItem('userEmail', loginEmail);
-      window.location.href = 'contacts.html'; // Redirect to 'add.html' after successful login
+      window.location.href = 'contacts.html'; 
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -56,5 +53,5 @@ loginBtn.addEventListener("click", function(event) {
 });
 
 signupBtn.addEventListener("click", function() {
-  window.location.href = 'signup.html'; // Redirect to the signup page when clicking "Sign up now"
+  window.location.href = 'signup.html';
 });

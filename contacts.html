@@ -9,14 +9,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="contacts.css">
+    <link rel="stylesheet" href="sidebar.css"> 
 </head>
 <body>
-    <div class="container">
-        <div class="contactscards" id="contact-cards"></div>
-        <button id="add-contact-btn" class="add-contact-btn" onclick="window.location.href='add.html'">Add Contacts</button>
-        <button id="logout-btn" class="logout-btn">Logout</button>
+    <div class="adde">
+        <img src="assets/add-friend.png" onclick="window.location.href='add.html';">
     </div>
 
+    <div id="sidebar-container"></div>
+
+   
+    <button id="sidebar-toggle-btn">☰</button> 
+
+    <div class="container">
+        <div class="contactscards" id="contact-cards"></div>
+        <button id="logout-btn" class="logout-btn">Logout</button>
+    </div>
+    
+   
+
+    <script src="sidebar.js"></script>
     <script type="module" src="contacts.js"></script>
+
 </body>
 </html>

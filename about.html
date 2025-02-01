@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cybersentinels/home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="about.css">
+     <link rel="stylesheet" href="sidebar.css"> 
+</head>
+
+<body>
+    <div id="sidebar-container"></div>
+
+   
+    <button id="sidebar-toggle-btn">☰</button> 
+
+    <div class="page">
+<div class="head">
+    <img src="assets\headim.jpg" alter="">
+    <p>ABOUT US</p>
+</div>
+
+<div class="grid-container">
+
+    <div class="grid-item">
+        <img src="assets\937eabdb857608ec5f018e626b66c156.jpg" alt="Image 1">
+    </div>
+    <div class="text-container">
+        <p class="text1">Our Vision: Empowering Safer Communication</p>
+        <p  class="text2">At Cybersentinels, we envision a world where communication is safe, efficient, and seamless. Our mission is to protect users from unwanted spam, scams, and fraudulent calls, while ensuring that every interaction is meaningful. We aim to simplify the way you connect with others by offering cutting-edge technology to identify callers and manage contacts with ease.</p>
+    </div>
+
+
+    <div class="text-container">
+        <p  class="text1">Innovative Technology for a Secure Experience</p>
+        <p  class="text2">We use advanced caller identification, spam detection, and data analytics to provide you with real-time insights into incoming calls. Our platform ensures that you only engage with verified contacts, and with every call, you have full control over who can reach you. Built on a robust database, our solution adapts to new challenges, staying ahead of potential threats to your communication privacy.</p>
+    </div>
+    <div class="grid-item">
+        <img src="assets\ff2c1c1163d8cb5e93ec70d28beaf695.jpg" alt="Image 2">
+    </div>
+
+    <div class="grid-item">
+        <img src="assets\face.jpg" alt="Image 3">
+    </div>
+    <div class="text-container">
+        <p  class="text1">Privacy and Security at Our Core</p>
+        <p  class="text2">At Cybersentinels, we are committed to safeguarding your privacy. We prioritize data security and operate with transparency, ensuring that your personal information is never compromised. Our platform is designed to put you in control, allowing you to manage your contacts and calls with confidence, all while respecting your privacy and preferences.</p>
+    </div>
+</div>
+
+
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const textContainers = document.querySelectorAll(".text-container");
+
+    function scrollTrigger() {
+        textContainers.forEach((container) => {
+            const rect = container.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            if (rect.top < windowHeight * 0.85) {
+                container.classList.add("p-visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", scrollTrigger);
+
+    scrollTrigger();
+});
+</script>
+<script src="sidebar.js"></script> 
+    
+</body>
+</html>

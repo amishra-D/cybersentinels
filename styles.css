@@ -212,14 +212,14 @@ body, html {
     height: auto;
     overflow: hidden;
     position:relative;
-    min-height: 30vh;
+    min-height: 10vh;
 }
 .float,.txt{
     position: absolute;
 }
 .device img {
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 40%;
+    max-height: 40%;
     width: 100%;
     justify-content: center;
     height: auto;
@@ -259,23 +259,28 @@ body, html {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    
 }
 
 .footer ul li {
     margin-bottom: 0.625rem; 
     font-size: 1vw; 
     font-family: 'Martel Sans', sans-serif;
-    color: white;
+    color: rgba(255, 255, 255, 0.708);
     gap: 2vw;
     
 }
+.footer ul li:hover{
+    color: white;
+    font-size: 1.2vw; 
+    cursor:pointer;
+}
 .footer1, .footer2, .footer3, .footer4 {
     flex: 1;
-    
 }
 .footer h1,.footer h2,.footer h3,.footer h4{
     font-family: 'Martel Sans', sans-serif;
-    color: white;
+    color: rgba(255, 255, 255, 0.641);
     font-size:2vw;
     margin: 0;
     margin-bottom: 1.5rem;

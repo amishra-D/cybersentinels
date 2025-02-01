@@ -4,17 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Keypad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;700&display=swap" rel="stylesheet">
+ 
   <link rel="stylesheet" href="keypad.css">
+  <link rel="stylesheet" href="sidebar.css"> 
   <script src="keypad.js" type="module" defer></script>
-
 </head>
 <body>
+  <div id="sidebar-container"></div>
+  <button id="sidebar-toggle-btn">☰</button> 
 
-  <!-- Keypad Container -->
   <div class="keypad-container">
     <input type="text" id="phone-number" readonly>
 
-    <!-- Keypad Buttons -->
     <div class="keypad">
       <button class="key" data-key="1">1</button>
       <button class="key" data-key="2">2</button>
@@ -33,13 +38,12 @@
       <button class="key" data-key="#">#</button>
     </div>
 
-    <!-- Call Options -->
     <div class="call-options">
       <button class="delete" id="delete-btn">⌫</button>
       <button class="call" id="call-btn">📞</button>
       <button class="end-call" id="end-call-btn">🚫</button>
     </div>
   </div>
-
+  <script src="sidebar.js"></script>
 </body>
 </html>

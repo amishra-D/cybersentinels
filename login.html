@@ -10,11 +10,19 @@
   <link rel="stylesheet" href="login.css">
 </head>
 <body>
+  <div id="preloader">
+    <div class="three-body">
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+    </div>
+</div>
     <div class="page">
     <img src="assets\WhatsApp Image 2025-01-30 at 15.34.14_e3e99cbc.jpg" class="background-image" alt="Background Image">
     <div class="form-section">
 
         <div class="grid">
+          <p class="head">LOG IN</p>
           <form action="https://httpbin.org/post" method="POST" class="form login">
       
             <div class="form__field">
@@ -79,6 +87,11 @@
     </div>
 </div>
       
-  <script type="module" src="login.js"></script>
+  <script type="module" src="login.js">
+    window.addEventListener("load", function () {
+    document.getElementById("preloader").style.display = "none";
+});
+
+  </script>
 </body>
 </html>

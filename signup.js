@@ -14,13 +14,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-const signupEmailIn = document.getElementById("email-login"); // Update to match the HTML id
-const signupPasswordIn = document.getElementById("password-login"); // Update to match the HTML id
-const confirmSignUpPasswordIn = document.getElementById("confirm-password-login"); // Update id
+const signupEmailIn = document.getElementById("email-login"); 
+const signupPasswordIn = document.getElementById("password-login"); 
+const confirmSignUpPasswordIn = document.getElementById("confirm-password-login");
 const createacctbtn = document.getElementById("login-btn");
 
 document.getElementById("signup-form").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent the default form submission behavior
+  event.preventDefault();
 
   var isVerified = true;
 
@@ -42,6 +42,7 @@ document.getElementById("signup-form").addEventListener("submit", function(event
     createUserWithEmailAndPassword(auth, signupEmail, signupPassword)
       .then((userCredential) => {
         const user = userCredential.user;
+        localStorage.setItem('userEmail', signupEmail);
         window.alert("Success! Account created.");
         window.location.href = 'contacts.html';
       })
