@@ -60,9 +60,9 @@ function checkContactMatch() {
     const matchedContact = contactsArray.find(contact => contact.phone.startsWith(enteredNumber));
     
     if (matchedContact) {
-        phoneNumberInput.style.color = "#4CAF50"; // Green text for matched contact
+        phoneNumberInput.style.color = "#4CAF50";
     } else {
-        phoneNumberInput.style.color = "#fffff"; // Default black
+        phoneNumberInput.style.color = "#fffff";
     }
 }
 
