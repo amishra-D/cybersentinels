@@ -1,8 +1,6 @@
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
-import { getFirestore, collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
-
+import { getFirestore, collection, getDocs, query, where, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyC7JHspwqzdDEhiXx6pEhGFoUS9wl3c03o",
@@ -13,7 +11,6 @@ const firebaseConfig = {
     appId: "1:533342175725:web:ddbdfe015b4cf29fee67e4",
     measurementId: "G-XZHP8Q4FSB"
 };
-
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -32,6 +29,7 @@ onAuthStateChanged(auth, (user) => {
         window.location.href = "login.html";
     }
 });
+
 async function fetchContacts() {
     contactCards.innerHTML = "";
 
@@ -53,7 +51,7 @@ async function fetchContacts() {
                 contacts[firstLetter] = [];
             }
 
-            contacts[firstLetter].push(contact);
+            contacts[firstLetter].push({ id: doc.id, ...contact });
         });
 
         const sortedKeys = Object.keys(contacts).sort();
@@ -68,9 +66,10 @@ async function fetchContacts() {
 
             contacts[letter].forEach(contact => {
                 innerHTML += `
-                    <div class="onecont">
+                    <div class="onecont" data-id="${contact.id}" data-name="${contact.name}" data-phone="${contact.phone}">
                         <img src="bk.png" alt="User">
                         <div class="contname">${contact.name}</div>
+                        <button class="delete-btn" data-id="${contact.id}"><img src="delete (1).png"</button>
                     </div>
                     <img src="assets/Line 1.png" alt="Separator" style="width: 85%;">
                 `;
@@ -79,8 +78,40 @@ async function fetchContacts() {
             card.innerHTML = innerHTML;
             contactCards.appendChild(card);
         });
+
+        document.querySelectorAll(".onecont .contname").forEach(contactEl => {
+            contactEl.addEventListener("click", (event) => {
+                const parent = event.target.closest(".onecont");
+                const name = parent.getAttribute("data-name");
+                const phone = parent.getAttribute("data-phone");
+
+                window.location.href = `contact-details.html?name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}`;
+            });
+        });
+        document.querySelectorAll(".delete-btn").forEach(btn => {
+            btn.addEventListener("click", async (event) => {
+                event.stopPropagation(); 
+                const contactId = btn.getAttribute("data-id");
+
+                const confirmDelete = confirm("Are you sure you want to delete this contact?");
+                if (confirmDelete) {
+                    await deleteContact(contactId);
+                }
+            });
+        });
+
     } catch (error) {
         console.error("Error fetching contacts:", error);
+    }
+}
+
+async function deleteContact(contactId) {
+    try {
+        await deleteDoc(doc(db, "contacts", contactId));
+        alert("Contact deleted successfully.");
+        fetchContacts();
+    } catch (error) {
+        console.error("Error deleting contact:", error);
     }
 }
 

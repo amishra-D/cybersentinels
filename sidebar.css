@@ -22,7 +22,7 @@
 #sidebar-toggle-btn {
     position: fixed;
     bottom: 20px;
-    left: 10px;
+    left: 12px;
     background-color: #2A2A2A;
     color: white;
     font-size: 34px;
@@ -103,14 +103,14 @@
         width: 250px;
         left: -270px;
     }
-    .sidebar-toggle-btn {
-        font-size: 8px;
+    #sidebar-toggle-btn {
+        font-size: 18px;
         left: 5px;
     }
     .sidebar.active {
         left: 0;
     }
     .sidebar.active + #sidebar-toggle-btn {
-        left: 260px;
+        left: 340px;
     }
 }

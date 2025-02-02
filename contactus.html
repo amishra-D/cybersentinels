@@ -23,43 +23,33 @@
     </div>
     
 <div class="forms">
-    <div class="inputGroup">
-        <input type="text" required="" autocomplete="off">
-        <label for="name">First Name</label>
-    </div>
-    <div class="inputGroup">
-        <input type="text" required="" autocomplete="off">
-        <label for="name">Last Name</label>
-    </div>
-    <div class="inputGroup">
-        <input type="text" required="" autocomplete="off">
-        <label for="name">Email</label>
-    </div>
-    <div class="inputGroup">
-        <input type="text" required="" autocomplete="off">
-        <label for="name">Subject</label>
-    </div>
-    <button class ="sub">SUBMIT</button>
+    <form id="contact-form">
+        <div class="inputGroup">
+            <input type="text" name="user_name" required autocomplete="off">
+            <label for="name">Name</label>
+        </div>
+        <div class="inputGroup">
+            <input type="email" name="user_email" required autocomplete="off">
+            <label for="email">Email</label>
+        </div>
+        <div class="inputGroup">
+            <input type="text" name="subject" required autocomplete="off">
+            <label for="subject">Subject</label>
+        </div>
+        <button type="submit" class="sub">SUBMIT</button>
+    </form>
 </div>
+
 <script src="sidebar.js"></script>
-<script>
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault(); 
-       
-        let firstName = document.getElementById("firstName").value.trim();
-        let lastName = document.getElementById("lastName").value.trim();
-        let email = document.getElementById("email").value.trim();
-        let subject = document.getElementById("subject").value.trim();
-
-       
-        if (firstName === "" || lastName === "" || email === "" || subject === "") {
-            alert("Please fill out all fields before submitting.");
-            return;
-        }
-        alert("Submitted successfully!");
-
-        document.getElementById("contactForm").reset();
-    });
-</script>
+<script src="ejj.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "zC51jZqE7mgscYrL7",
+            });
+        })();
+    </script>
 </body>
 </html>

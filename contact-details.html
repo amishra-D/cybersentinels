@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details</title>
+    <link rel="stylesheet" href="contact-details.css">
+    <link rel="stylesheet" href="sidebar.css"> 
+   
+</head>
+<body>
+    <div id="sidebar-container"></div>
+
+   
+    <button id="sidebar-toggle-btn">☰</button> 
+    <div class="contact-card">
+        <div class="contact-header">
+            <img src="bk.png" alt="User Icon">
+            <h2 id="contact-name"></h2>
+        </div>
+        <p class="contact-phone" id="contact-phone"></p>
+        <button class="back-button" onclick="window.location.href='contacts.html';">Back to Contacts</button>
+    </div>
+
+    <script>
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                name: params.get("name"),
+                phone: params.get("phone"),
+            };
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const { name, phone } = getQueryParams();
+
+            if (name && phone) {
+                document.getElementById("contact-name").textContent = name;
+                document.getElementById("contact-phone").textContent = phone;
+            } else {
+                document.body.innerHTML = "<h2>Contact details not found.</h2>";
+            }
+        });
+    </script>
+     <script src="sidebar.js"></script>
+</body>
+</html>

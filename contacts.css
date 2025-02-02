@@ -12,6 +12,7 @@ body, html {
     right: 15px;
     
 }
+
 .adde img{
     width:50%;
     height: auto;
@@ -29,6 +30,10 @@ body, html {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+.delete-btn{
+    background-color: #2A2626;
+    border:0;
 }
 .contactscard {
     background: #2A2626;
