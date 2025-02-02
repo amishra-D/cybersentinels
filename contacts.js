@@ -38,7 +38,8 @@ async function fetchContacts() {
         const querySnapshot = await getDocs(q);
 
         if (querySnapshot.empty) {
-            contactCards.innerHTML = "<p>No contacts found. Add a new one!</p>";
+            contactCards.innerHTML = '<p style="color: white; font-size: 16px; text-align: center; font-weight: bold;">No contacts found. Add a new one!</p>';
+
             return;
         }
 

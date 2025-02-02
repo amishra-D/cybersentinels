@@ -167,12 +167,11 @@ body, html {
         font-size: 14px;
     }
 
-    /* Adjust Submit Button */
     .sub {
-        width: 90%; /* Match input width */
+        width: 90%;
         font-size: 14px;
-        padding: 10px 0; /* Adjust padding */
-        border-radius: 10px; /* Slightly rounded */
+        padding: 10px 0;
+        border-radius: 10px;
         text-align: center;
         margin-bottom: 20px;
     }
