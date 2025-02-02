@@ -1,4 +1,4 @@
-// Function to get query parameters from URL
+
 function getQueryParams() {
     const params = new URLSearchParams(window.location.search);
     return {
@@ -7,7 +7,6 @@ function getQueryParams() {
     };
 }
 
-// Display the contact details
 document.addEventListener("DOMContentLoaded", () => {
     const { name, phone } = getQueryParams();
 

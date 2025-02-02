@@ -21,7 +21,7 @@ body {
 .contact-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    animation: float 2s ease-in-out infinite; /* Float animation on hover */
+    animation: float 2s ease-in-out infinite;
 }
 
 .contact-header {

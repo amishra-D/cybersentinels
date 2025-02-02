@@ -35,23 +35,38 @@ onAuthStateChanged(auth, (user) => {
         window.location.href = "login.html";
     }
 });
-
 saveBtn.addEventListener("click", async () => {
     const contactName = contactNameInput.value.trim();
     const contactPhone = contactPhoneInput.value.trim();
-
     if (!contactName || !contactPhone) {
         alert("Please fill out all fields.");
         return;
     }
 
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(contactPhone)) {
+        alert("Phone number must be exactly 10 digits.");
+        return;
+    }
+
     try {
+        const q = query(collection(db, "contacts"), 
+                        where("userUID", "==", currentUserUID), 
+                        where("phone", "==", contactPhone));
+        const querySnapshot = await getDocs(q);
+
+        if (!querySnapshot.empty) {
+            alert("Phone number already exists!");
+            return;
+        }
+
         console.log("Saving contact:", { contactName, contactPhone, userUID: currentUserUID });
         await addDoc(collection(db, "contacts"), {
             name: contactName,
             phone: contactPhone,
             userUID: currentUserUID
         });
+
         alert("Contact saved!");
         contactNameInput.value = "";
         contactPhoneInput.value = "";
